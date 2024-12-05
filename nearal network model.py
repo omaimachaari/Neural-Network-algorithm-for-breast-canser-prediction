@@ -3,8 +3,8 @@ from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 
-iris = load_breast_cancer()
-x, y = iris.data, iris.target
+df = load_breast_cancer()
+x, y = df.data, df.target
 
 one_hot_encoder = OneHotEncoder(sparse_output=False)
 y = one_hot_encoder.fit_transform(y.reshape(-1, 1))
